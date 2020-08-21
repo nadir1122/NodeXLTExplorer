@@ -8,6 +8,5 @@ var BlockSchema = new Schema({
   timestamp: { type: Number, default: 0, index: true },
 }, {id: false});
 
-BlockSchema.index({total: 1, total: -1, blockindex: 1, blockindex: -1});
 
 module.exports = mongoose.model('block', BlockSchema);
