@@ -25,6 +25,16 @@ db.connect(dbString, function() {
       });
     }
   });
+  db.check_blocks(settings.coin, function(exists) {
+    if (exists == false) {
+      console.log('no blocks entry found, creating now..');
+      db.create_blocks(settings.coin, function(){
+        //console.log('stats entry created successfully.');
+      });
+    } else {
+    //blocks collection already exists
+    }
+  });
   // check markets
   var markets = settings.markets.enabled;
   for (var i = 0; i < markets.length; i++) {
