@@ -53,7 +53,7 @@
 
   "wallet": {
     "host": "localhost",
-    "port": 9332,
+    "port": 5533,
     "username": "grownstar",
     "password": "grownstar"
   },
