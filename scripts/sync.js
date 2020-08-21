@@ -1,5 +1,6 @@
 var mongoose = require('mongoose')
   , db = require('../lib/database')
+    , block = require('../models/block')
   , Tx = require('../models/tx')
   , Address = require('../models/address')
   , AddressTx = require('../models/addresstx')
