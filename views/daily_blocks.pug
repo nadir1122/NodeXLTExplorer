@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h2="Daily Blocks Count (Last 30 days)"
+    table
+      each val in  blocks_list
+        tr
+         td=val.date
+         td=val.count

@@ -134,7 +134,17 @@ function route_get_claim_form(res, hash){
 router.get('/', function(req, res) {
   route_get_index(res, null);
 });
-
+router.get('/', function(req, res) {
+  route_get_index(res, null);
+});
+router.get('/blocks_list',function(req,res){
+  lib.group_blocks(function(total_blocks)
+  {
+    res.render("daily_blocks",{blocks_list:total_blocks});
+    console.log("I got:");
+    console.log(total_blocks);
+  });
+});
 router.get('/info', function(req, res) {
   res.render('info', { active: 'info', address: settings.address, hashes: settings.api });
 });
